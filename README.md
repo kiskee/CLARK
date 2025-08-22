@@ -78,3 +78,36 @@ npx tsc --init --outDir dist/ --rootDir src
   "build": "rimraf ./dist && tsc",
   "start": "npm run build && node dist/app.js"
 ```
+
+5. reeplace you ts config if you want yo use ECMAScript6
+
+```
+  {
+  "exclude": ["node_modules"],
+  "include": ["src/**/*"],
+
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist/",
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "emitDeclarationOnly": true,
+    "allowImportingTsExtensions": true,
+    "esModuleInterop": true,
+    "types": [],
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "strict": true,
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true
+  }
+}
+```
