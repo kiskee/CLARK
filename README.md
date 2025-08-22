@@ -51,6 +51,11 @@ npm install -D rimraf
 
 # Node con TypeScript - Recomendado
 
+0. inicializar el package.json de node
+```
+npm init -y && npm pkg set type=module
+```
+
 1. Instalar TypeScript y demás dependencias
 ```
 npm i -D typescript @types/node ts-node nodemon rimraf
